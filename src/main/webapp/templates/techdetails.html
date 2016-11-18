@@ -1,0 +1,30 @@
+<ion-list>
+    <form name="techForm">
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="Name" ng-model="tech.name" ng-required="true">
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">Technologietyp</div>
+            <select ng-model="tech.type" ng-required="true">
+                <option>Software Framework</option>
+                <option>Library</option>
+                <option>Database</option>
+                <option>Web/Application Server</option>
+                <option>Infrastruktur Plattform</option>
+            </select>
+        </label>
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Logo URL</span>
+            <input type="text" placeholder="Logo URL" ng-model="tech.logo">
+        </label>
+        <div class="item">
+            <button class="button button-block button-positive icon-left ion-plus-round"
+                    ng-click="save()" ng-disabled="techForm.$invalid || busy">Speichern</button>
+        </div>
+        <div class="item" ng-show="editMode">
+            <button class="button button-block button-assertive icon-left ion-close-round"
+                    ng-click="delete()" ng-disabled="techForm.$invalid || busy">L&ouml;schen</button>
+        </div>
+    </form>
+</ion-list>

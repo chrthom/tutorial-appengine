@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="techsurvey">
+    <head lang="de">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="style/lib/ionic.min.css" />
+        <link rel="stylesheet" type="text/css" href="style/techsurvey.css" />
+        <title>Tech Survey</title>
+    </head>
+    <body ng-controller="MainCtrl">
+        <ion-side-menus>
+            <ion-side-menu-content>
+                <ion-header-bar class="bar bar-positive">
+                    <div class="buttons">
+                        <button class="button icon ion-navicon-round" menu-toggle="left"></button>
+                    </div>
+                    <h1 class="title">{{pageTitle}}</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <div id="content-view" ng-view></div>
+                </ion-content>
+            </ion-side-menu-content>
+            <ion-side-menu side="left">
+                <ion-header-bar class="bar bar-positive">
+                    <h1 class="title">Men&uuml;</h1>
+                </ion-header-bar>
+                <ion-content>
+                    <ion-list>
+                        <a class="item" href="#/new" menu-toggle="left">Technologie hinzuf&uuml;gen</a>
+						<a class="item" href="#/compare" menu-toggle="left">Technologie vergleichen</a>
+                        <a class="item" href="#/" menu-toggle="left">Zur Startseite</a>
+                    </ion-list>
+                </ion-content>
+            </ion-side-menu>
+        </ion-side-menus>
+        <script src="js/lib/ionic.bundle.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.3/angular-route.min.js"></script>
+        <script src="js/techsurvey.js"></script>
+    </body>
+</html>

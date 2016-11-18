@@ -1,0 +1,18 @@
+<ion-list>
+	<div class="item item-divider item-text-wrap">Welche dieser zwei Technologien würdest du eher nutzen?</div>
+	<div ng-show="tech1.name && tech2.name">
+		<a class="item item-avatar" ng-click="choose('left')">
+			<img ng-src="{{tech1.logo || 'style/images/defaultlogo.png'}}" />
+			<h2 ng-bind="tech1.name"></h2>
+			<p ng-bind="tech1.type"></p>
+		</a>
+		<a class="item item-avatar" ng-click="choose('right')">
+			<img ng-src="{{tech2.logo || 'style/images/defaultlogo.png'}}" />
+			<h2 ng-bind="tech2.name"></h2>
+			<p ng-bind="tech2.type"></p>
+		</a>
+	</div>
+	<div ng-show="notEnoughTechs">
+		<p class="item">Es wurden noch nicht genügend Technologien erstellt, um eine Bewertung durchzuführen.</p>
+	</div>
+</ion-list>

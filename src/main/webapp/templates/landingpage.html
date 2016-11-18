@@ -1,0 +1,9 @@
+<ion-list>
+    <a class="item item-avatar" ng-repeat="tech in techs" ng-href="#/edit/{{tech.id}}">
+        <img ng-src="{{tech.logo || 'style/images/defaultlogo.png'}}" />
+        <h2 ng-bind="tech.name"></h2>
+        <p ng-bind="tech.type"></p>
+        <span class="badge badge-positive" ng-bind="tech.score"></span>
+        <span class="item-note">Hinzugef&uuml;gt am <span ng-bind="tech.addedDate | date: 'dd.MM.yyyy HH:mm:ss'"></span></span>
+    </a>
+</ion-list>
